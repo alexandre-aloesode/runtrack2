@@ -1,0 +1,37 @@
+body {
+    background-color: yellow;
+    margin: 20%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+form{
+    display:flex;
+    flex-direction: column;
+    width: 100%;
+}
+    input{
+    align-self: center;
+    width: 30%;
+}
+    label{
+        align-self: center;
+    }
+    button{
+        align-self: center;
+    }
+    select{
+        align-self: center;
+    }
+    #prenom{
+        margin-bottom: 20px;
+    }
+    #nom{
+        margin-bottom: 20px;
+    }
+    #choix{
+        margin-bottom: 20px;
+        width: 30%;
+        display: flex;
+        align-content: center;
+    }
+
