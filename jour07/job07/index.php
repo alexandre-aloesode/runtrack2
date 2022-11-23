@@ -43,9 +43,16 @@ Elle affiche “$str” en ajoutant un “_” aux mots finissant par “me”. 
 
     <?php
 
-    function mySplit($str){
 
-    }
+
+     function mySplit($str){
+        for($i = 0 ; isset($str[$i]); $i++){
+            if($str[$i] == " "){
+                $mots[] = $str;
+            }
+        }
+        return $mots;
+     }
     
     function gras($words){
         $maj = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";       
@@ -89,18 +96,24 @@ Elle affiche “$str” en ajoutant un “_” aux mots finissant par “me”. 
                 echo $words[$x] . " ";
             }   
         }
-        return $words;
     }
 
     $str = $_GET["str"];
     $words = explode(" ", $str);
+    $mots = [];
+    $words2 = mySplit($str);
+    echo $words2;
    
-    if($_GET["fonction"] == "Gras"){
+    if($_GET["fonction"] == "--"){
+        echo "Merci de choisir une fonction";
+    } elseif($_GET["fonction"] == "Gras"){
         gras($words);
     } elseif($_GET["fonction"] == "Cesar"){
         echo cesar($str);
     } elseif($_GET["fonction"] == "Plateforme"){
      plateforme($words);
+    } else {
+        echo "Merci de choisir une fonction";
     }
 
     ?>
