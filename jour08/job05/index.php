@@ -10,14 +10,17 @@ permet également de réinitialiser la partie à tout moment. -->
 
 <html>
     <table>
+        <form method ="get">
     <?php
     for($lignes = 0; $lignes < 3; $lignes++){
         echo '<tr>';
         for($col = 0; $col < 3; $col++){
-            echo '<td> <input type="submit" name="case" value=' . $lignes . '-' . $col . '></td>';
+            echo '<td> <button type="submit" name="case" value=' . $lignes . "5" . $col . '>-</button></td>';
         }
         echo '</tr>';
     }
     ?>
+    </form>
     </table>
+
 </html>
