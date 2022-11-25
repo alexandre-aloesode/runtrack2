@@ -3,6 +3,6 @@
 -- ainsi que sa capacité).
 -- Dans ce résultat, la colonne “nom” de la salle doit être renommée en “Biggest Room”
 
-SELECT etage.nom AS etage, salles.nom AS BiggestRoom, MAX(capacite) 
-FROM salles
-INNER JOIN `etage` ON salles.id_etage = etage.id;
+    SELECT etage.nom AS etage, salles.nom AS BiggestRoom, MAX(capacite) 
+    FROM salles
+    INNER JOIN `etage` ON salles.id_etage = etage.id;
